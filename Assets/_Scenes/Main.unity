@@ -898,11 +898,14 @@ MonoBehaviour:
   - {fileID: 1711285665241614, guid: 67bce2ea7e1646f41bdf3fc900439b1d, type: 2}
   - {fileID: 1444934218402148, guid: 166234531c8381c42a0b21462f48a918, type: 2}
   - {fileID: 1424283298342694, guid: cc3215bf2480d844182e5f3f817db57f, type: 2}
+  flagShip: {fileID: 1635240205388670, guid: b39a82bd5e1e9aa4784f0189db6974b6, type: 2}
   spawnValues: {x: 6, y: 0, z: 16}
   hazardCount: 5
+  bossWait: 10
   spawnWait: 0.5
   startWait: 1
   waveWait: 4
+  bossWave: 1
   scoreText: {fileID: 370915021}
   restartText: {fileID: 120705608}
   gameOverText: {fileID: 2077534724}
