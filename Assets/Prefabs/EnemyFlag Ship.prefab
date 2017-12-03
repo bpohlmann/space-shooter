@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 82109507406026006}
   m_Layer: 0
   m_Name: EnemyFlag Ship
-  m_TagString: Enemy
+  m_TagString: EnemyFlagShip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -308,6 +308,7 @@ MonoBehaviour:
   explosion: {fileID: 100012, guid: 384371afbb4354cc9a3fc68eab303756, type: 2}
   playerExplosion: {fileID: 100008, guid: a93496017806b7740910df5fd946f306, type: 2}
   scoreValue: 100
+  flagShipLive: 0
 --- !u!114 &114701627409947920
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -18,8 +18,9 @@ public class GameController : MonoBehaviour
 	public GUIText scoreText;
 	public GUIText restartText;
 	public GUIText gameOverText;
+    public GUIText bossText;
 
-	private bool gameOver;
+    private bool gameOver;
 	private bool restart;
 	private int score;
 
@@ -29,7 +30,8 @@ public class GameController : MonoBehaviour
 		gameOver = false;
 		restartText.text = "";
 		gameOverText.text = "";
-		score = 0;
+        bossText.text = "";
+        score = 0;
 		UpdateScore ();
 		StartCoroutine (SpawnWaves ());
 		waveCount = 0;
@@ -71,8 +73,10 @@ public class GameController : MonoBehaviour
 			}
 			if (waveCount == bossWave) 
 			{
-				
-				Vector3 spawnPosition = new Vector3 (Random.Range (-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
+                bossText.text = "Boss Fight";
+                yield return new WaitForSeconds(startWait);
+                bossText.text = "";
+                Vector3 spawnPosition = new Vector3 (Random.Range (-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
 				Quaternion spawnRotation = Quaternion.identity;
 				Instantiate (flagShip, spawnPosition, spawnRotation);
 				yield return new WaitForSeconds (bossWait);
