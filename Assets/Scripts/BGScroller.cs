@@ -6,6 +6,8 @@ public class BGScroller : MonoBehaviour {
 
 	public float scrollSpeed;
 	public float titleSizeZ;
+    public float scrollSpeedAdd;
+    
 
 	private Vector3 startPosition;
 
@@ -20,6 +22,9 @@ public class BGScroller : MonoBehaviour {
 	{
 		float newPosition = Mathf.Repeat (Time.time * scrollSpeed, titleSizeZ);
 		transform.position = startPosition + Vector3.forward * newPosition;
+        scrollSpeed = scrollSpeed + scrollSpeedAdd;
 
-	}
+        
+
+    }
 }

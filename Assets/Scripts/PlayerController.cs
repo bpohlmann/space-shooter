@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
 	public GameObject shot;
 	public Transform shotSpawn;
 	public float fireRate;
+    public float bonusRate;
+   
 
 	private float nextFire;
 
@@ -49,4 +51,14 @@ public class PlayerController : MonoBehaviour
 
 		GetComponent<Rigidbody> ().rotation = Quaternion.Euler (0.0f, 0.0f, GetComponent<Rigidbody> ().velocity.x * -tilt);
 	}
-}
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Bonus"))
+        {
+            fireRate = fireRate - bonusRate;
+           
+            Destroy(other.gameObject);
+        }
+    }
+    }

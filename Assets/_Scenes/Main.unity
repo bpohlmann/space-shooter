@@ -244,6 +244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scrollSpeed: -0.3
   titleSizeZ: 30
+  scrollSpeedAdd: 0.01
 --- !u!1 &370915020
 GameObject:
   m_ObjectHideFlags: 0
@@ -953,6 +954,7 @@ MonoBehaviour:
   - {fileID: 1711285665241614, guid: 67bce2ea7e1646f41bdf3fc900439b1d, type: 2}
   - {fileID: 1444934218402148, guid: 166234531c8381c42a0b21462f48a918, type: 2}
   - {fileID: 1424283298342694, guid: cc3215bf2480d844182e5f3f817db57f, type: 2}
+  - {fileID: 1086531599972802, guid: 4ad3fe2617d3e4647b04d1396b37e758, type: 2}
   flagShip: {fileID: 1635240205388670, guid: b39a82bd5e1e9aa4784f0189db6974b6, type: 2}
   spawnValues: {x: 6, y: 0, z: 16}
   hazardCount: 5
@@ -1257,6 +1259,7 @@ MonoBehaviour:
   shot: {fileID: 100002, guid: a48ca3c65e71c3e4fbe0903cc92402da, type: 2}
   shotSpawn: {fileID: 1155173719}
   fireRate: 0.25
+  bonusRate: 0.05
 --- !u!82 &2005435988
 AudioSource:
   m_ObjectHideFlags: 0
