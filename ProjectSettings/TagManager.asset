@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - EnemyFlagShip
   - Bonus
+  - non bonus
   layers:
   - Default
   - TransparentFX

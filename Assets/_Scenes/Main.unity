@@ -388,6 +388,58 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &651095717
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 651095718}
+  - component: {fileID: 651095719}
+  m_Layer: 0
+  m_Name: Increase Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &651095718
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 651095717}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5, y: 0.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1535406213}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!132 &651095719
+GUIText:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 651095717}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: Increase Text
+  m_Anchor: 4
+  m_Alignment: 1
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 20
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4287687918
+  m_PixelCorrect: 1
+  m_RichText: 1
 --- !u!1 &990113500
 GameObject:
   m_ObjectHideFlags: 0
@@ -760,6 +812,7 @@ Transform:
   - {fileID: 370915022}
   - {fileID: 120705609}
   - {fileID: 990113501}
+  - {fileID: 651095718}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -955,6 +1008,7 @@ MonoBehaviour:
   - {fileID: 1444934218402148, guid: 166234531c8381c42a0b21462f48a918, type: 2}
   - {fileID: 1424283298342694, guid: cc3215bf2480d844182e5f3f817db57f, type: 2}
   - {fileID: 1086531599972802, guid: 4ad3fe2617d3e4647b04d1396b37e758, type: 2}
+  - {fileID: 1998955361635276, guid: 4284ba7fadf838941aaba5b4205807e3, type: 2}
   flagShip: {fileID: 1635240205388670, guid: b39a82bd5e1e9aa4784f0189db6974b6, type: 2}
   spawnValues: {x: 6, y: 0, z: 16}
   hazardCount: 5
@@ -1260,6 +1314,7 @@ MonoBehaviour:
   shotSpawn: {fileID: 1155173719}
   fireRate: 0.25
   bonusRate: 0.05
+  bonusText: {fileID: 651095719}
 --- !u!82 &2005435988
 AudioSource:
   m_ObjectHideFlags: 0
