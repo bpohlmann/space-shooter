@@ -9,6 +9,7 @@ TagManager:
   - EnemyFlagShip
   - Bonus
   - non bonus
+  - shot
   layers:
   - Default
   - TransparentFX

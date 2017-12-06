@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public float tilt;
     public Boundary boundary;
+    
 
 
     public GameObject shot;
@@ -19,26 +20,37 @@ public class PlayerController : MonoBehaviour
     public float fireRate;
     public float bonusRate;
     public GUIText bonusText;
+    
+    
 
+
+    
 
 
     private float nextFire;
+   
 
     private void Start()
     {
         bonusText.text = "";
+       
+        
 
     }
     void Update()
     {
         if (Input.GetButton("Fire1") && Time.time > nextFire)
         {
-            bonusText.text = "";
+            
             nextFire = Time.time + fireRate;
             Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
             GetComponent<AudioSource>().Play();
 
+
+            bonusText.text = "";
         }
+
+        
     }
 
 
@@ -60,10 +72,12 @@ public class PlayerController : MonoBehaviour
         );
 
         GetComponent<Rigidbody>().rotation = Quaternion.Euler(0.0f, 0.0f, GetComponent<Rigidbody>().velocity.x * -tilt);
+        
     }
 
     void OnTriggerEnter(Collider other)
     {
+       
         if (other.CompareTag("Bonus"))
         {
             fireRate = fireRate - bonusRate;
@@ -77,6 +91,14 @@ public class PlayerController : MonoBehaviour
             bonusText.text = "Firerate decrease";
             
             Destroy(other.gameObject);
+            
+            
+
+            
         }
+
+        
+
+       
     }
 }

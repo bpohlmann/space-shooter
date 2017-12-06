@@ -244,7 +244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scrollSpeed: -0.3
   titleSizeZ: 30
-  scrollSpeedAdd: 0.01
+  scrollSpeedAdd: 0.005
 --- !u!1 &241230130
 GameObject:
   m_ObjectHideFlags: 0
@@ -1788,11 +1788,11 @@ MonoBehaviour:
   flagShip: {fileID: 1635240205388670, guid: b39a82bd5e1e9aa4784f0189db6974b6, type: 2}
   spawnValues: {x: 6, y: 0, z: 16}
   hazardCount: 5
-  bossWait: 10
+  bossWait: 5
   spawnWait: 0.5
   startWait: 1
-  waveWait: 4
-  bossWave: 1
+  waveWait: 3
+  bossWave: 4
   scoreText: {fileID: 370915021}
   restartText: {fileID: 120705608}
   gameOverText: {fileID: 2077534724}
@@ -2088,7 +2088,7 @@ MonoBehaviour:
     zMax: 8
   shot: {fileID: 100002, guid: a48ca3c65e71c3e4fbe0903cc92402da, type: 2}
   shotSpawn: {fileID: 1155173719}
-  fireRate: 0.25
+  fireRate: 0.5
   bonusRate: 0.05
   bonusText: {fileID: 651095719}
 --- !u!82 &2005435988
