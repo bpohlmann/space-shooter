@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     public float fireRate;
     public float bonusRate;
     public GUIText bonusText;
+	public float speedAdd;
     
     
 
@@ -47,10 +48,10 @@ public class PlayerController : MonoBehaviour
             GetComponent<AudioSource>().Play();
 
 
-            bonusText.text = "";
+
         }
 
-        
+		speed = speed + speedAdd;
     }
 
 

@@ -244,7 +244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scrollSpeed: -0.3
   titleSizeZ: 30
-  scrollSpeedAdd: 0.005
+  scrollSpeedAdd: -0.005
 --- !u!1 &241230130
 GameObject:
   m_ObjectHideFlags: 0
@@ -1324,7 +1324,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Continue
+  m_Text: 'Continue / Play
+
 
 
 '
@@ -1797,6 +1798,7 @@ MonoBehaviour:
   restartText: {fileID: 120705608}
   gameOverText: {fileID: 2077534724}
   bossText: {fileID: 990113502}
+  bonusText: {fileID: 651095719}
 --- !u!4 &1940663832
 Transform:
   m_ObjectHideFlags: 0
@@ -2091,6 +2093,7 @@ MonoBehaviour:
   fireRate: 0.5
   bonusRate: 0.05
   bonusText: {fileID: 651095719}
+  speedAdd: 0.0005
 --- !u!82 &2005435988
 AudioSource:
   m_ObjectHideFlags: 0

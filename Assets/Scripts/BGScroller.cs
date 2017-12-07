@@ -22,7 +22,7 @@ public class BGScroller : MonoBehaviour {
 	{
 		float newPosition = Mathf.Repeat (Time.time * scrollSpeed, titleSizeZ);
 		transform.position = startPosition + Vector3.forward * newPosition;
-        scrollSpeed = scrollSpeed + scrollSpeedAdd;
+		scrollSpeed = scrollSpeed + scrollSpeedAdd;
 
         
 

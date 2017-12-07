@@ -19,6 +19,7 @@ public class GameController : MonoBehaviour
 	public GUIText restartText;
 	public GUIText gameOverText;
     public GUIText bossText;
+	public GUIText bonusText;
    
 
     private bool gameOver;
@@ -47,6 +48,7 @@ public class GameController : MonoBehaviour
 				Application.LoadLevel (Application.loadedLevel);
 			}
 		}
+
 	}
 
 
@@ -66,7 +68,7 @@ public class GameController : MonoBehaviour
                     Quaternion spawnRotation = Quaternion.identity;
                     Instantiate(hazard, spawnPosition, spawnRotation);
                     yield return new WaitForSeconds(spawnWait);
-                    
+					bonusText.text = "";
                 }
             }
             else
@@ -78,6 +80,7 @@ public class GameController : MonoBehaviour
                     Quaternion spawnRotation = Quaternion.identity;
                     Instantiate(hazard, spawnPosition, spawnRotation);
                     yield return new WaitForSeconds(spawnWait);
+					bonusText.text = "";
                     
                 }
 

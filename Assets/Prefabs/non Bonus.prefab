@@ -26,7 +26,6 @@ GameObject:
   - component: {fileID: 114408711570605080}
   - component: {fileID: 114183816563181994}
   - component: {fileID: 54197349085594328}
-  - component: {fileID: 114963435609009894}
   m_Layer: 0
   m_Name: non Bonus
   m_TagString: non bonus
@@ -148,14 +147,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tumble: 5
---- !u!114 &114963435609009894
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1998955361635276}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
