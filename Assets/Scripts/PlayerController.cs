@@ -17,10 +17,14 @@ public class PlayerController : MonoBehaviour
 
     public GameObject shot;
     public Transform shotSpawn;
+    public Transform shotSpawnDS1;
+    public Transform shotSpawnDS2;
     public float fireRate;
     public float bonusRate;
     public GUIText bonusText;
 	public float speedAdd;
+    public GUIText doubleShotText;
+    private bool doubleShot;
     
     
 
@@ -34,33 +38,61 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         bonusText.text = "";
-       
-        
+        doubleShotText.text = "";
+        doubleShot = false;
 
     }
     void Update()
     {
-        if (Input.GetButton("Fire1") && Time.time > nextFire)
+        if (doubleShot == false)
         {
-            
-            nextFire = Time.time + fireRate;
-            Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
-            GetComponent<AudioSource>().Play();
+            if (Input.GetButton("Fire1") && Time.time > nextFire)
+            {
+
+                nextFire = Time.time + fireRate;
+                Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+                GetComponent<AudioSource>().Play();
 
 
 
+            }
         }
-		// musik für bonus ggf play on awake
-		//speed bei enemys asteroids ggf dem backround anpassen
-		// Hier soll bei einem Score von 1000 und einer tastenbetätigung ein Doppelschuss implementiert werden
-		//dazu taste bzw text anzeigen ( bei score = 1000) und bei tastendruck anderen shot spawn wählen(hierzu in if Input.GetButton ..... eine if Auswahl Anweisund implemenieren die den shotSpawn auswählt bei dem 
-		//Parameter bool doubleShot (true) bzw doubleShot(false)
-		//if (DestroyByContact.score < 1000) 
-		//{
-			
-		//	gameController.AddScore (-DestroyByContact.score);
-		//}
 
+        if (doubleShot == true)
+        {
+            if (Input.GetButton("Fire1") && Time.time > nextFire)
+            {
+
+                nextFire = Time.time + fireRate;
+                Instantiate(shot, shotSpawnDS1.position, shotSpawnDS1.rotation);
+                Instantiate(shot, shotSpawnDS2.position, shotSpawnDS2.rotation);
+                GetComponent<AudioSource>().Play();
+
+
+
+            }
+        }
+
+        // musik für bonus ggf play on awake
+        //speed bei enemys asteroids ggf dem backround anpassen
+        // Hier soll bei einem Score von 1000 und einer tastenbetätigung ein Doppelschuss implementiert werden
+        //dazu taste bzw text anzeigen ( bei score = 1000) und bei tastendruck anderen shot spawn wählen(hierzu in if Input.GetButton ..... eine if Auswahl Anweisund implemenieren die den shotSpawn auswählt bei dem 
+        //Parameter bool doubleShot (true) bzw doubleShot(false)
+        //if (DestroyByContact.score < 1000) 
+        //{
+
+        //	gameController.AddScore (-DestroyByContact.score);
+        //}
+
+        if (Time.time   >= 10 && doubleShot == false)
+        {
+            doubleShotText.text = "Press `P´ for Double Shot";
+            if (Input.GetKeyDown(KeyCode.P ))
+            {
+                doubleShot = true;
+                doubleShotText.text = "";
+            }
+        }
 		speed = speed + speedAdd;
     }
 

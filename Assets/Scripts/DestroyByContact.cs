@@ -26,6 +26,13 @@ public class DestroyByContact : MonoBehaviour
 
     }
 
+    void Update()
+    {
+        if (transform.position.z < -7)
+        {
+            Destroy(gameObject);
+        }
+    }
     void OnTriggerEnter(Collider other)
     {
 
