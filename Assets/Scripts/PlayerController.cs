@@ -73,18 +73,9 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        // musik für bonus ggf play on awake
-        //speed bei enemys asteroids ggf dem backround anpassen
-        // Hier soll bei einem Score von 1000 und einer tastenbetätigung ein Doppelschuss implementiert werden
-        //dazu taste bzw text anzeigen ( bei score = 1000) und bei tastendruck anderen shot spawn wählen(hierzu in if Input.GetButton ..... eine if Auswahl Anweisund implemenieren die den shotSpawn auswählt bei dem 
-        //Parameter bool doubleShot (true) bzw doubleShot(false)
-        //if (DestroyByContact.score < 1000) 
-        //{
+        
 
-        //	gameController.AddScore (-DestroyByContact.score);
-        //}
-
-        if (Time.time   >= 10 && doubleShot == false)
+        if (Time.time   >= 90 && doubleShot == false)
         {
             doubleShotText.text = "Press `P´ for Double Shot";
             if (Input.GetKeyDown(KeyCode.P ))

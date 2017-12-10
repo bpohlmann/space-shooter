@@ -7,7 +7,8 @@ public class GameBreak : MonoBehaviour {
 
     void Start()
     {
-        Canavas.gameObject.SetActive(false);
+        Canavas.gameObject.SetActive(true);
+        Time.timeScale = 0;
     }
     // Update is called once per frame
     void Update ()
